@@ -1,24 +1,50 @@
-function elegiTuMate (){
-    const productos = [
-        { nombre: "Imperial", stock: 0 },
-        { nombre: "Torpedo", stock: 2 },
-        { nombre: "Camionero", stock: 0 }
-    ];
-    let nproducto = prompt("Elegi tu futuro mate :  \n Imperial \n Torpedo \n Camionero");
+function elegiTuMate() {
+    let mates = [];
+    let continuar = true;
+    let preciototal = 0;
 
 
 
-    for (let i = 0; i< productos.length; i++){
-        //console.log (productos[i].nombre)
-    
-        if (productos[i].nombre == nproducto){
-            if (productos[i].stock > 0){
-                alert ("En este momento hay stock disponible")
-            }else{
-            alert ("En este momento no hay stock disponible")
-            }
+
+    while (continuar) {
+        const nmate = prompt("Ingresa el tipo de mate: \n Imperial \n Torpedo \n Camionero").toLocaleLowerCase();
+        const cantidad = parseFloat(prompt("Ingresa la cantidad"));
+
+        if (isNaN(cantidad) || cantidad < 0 || cantidad > 10) {
+            alert("Ingresa una cantidad válida");
+        } else {
+            let productoEncontrado = productos.find((nproducto) => nproducto.nombre === nmate);
+            console.log(productoEncontrado);
+            preciototal = preciototal + (cantidad * productoEncontrado.precio);
+            console.log(preciototal);
+        }
+        const respuesta = prompt("Quieres seguir comprando? Si/No").toLocaleLowerCase();
+        if(respuesta === "si"){
+            continuar = true;
+        } else {
+            prompt ("El precio final es: " + preciototal)
+            continuar = false
+            
         }
     }
+
+    console.log("Mates seleccionados:", mates);
 }
 
-elegiTuMate ();
+const productos = [
+    {
+        nombre: "imperial",
+        precio: 15000
+    },
+    {
+        nombre: "torpedo",
+        precio: 16000
+    },
+    {
+        nombre: "camionero",
+        precio: 17000
+    }
+];
+
+
+elegiTuMate();
