@@ -99,15 +99,15 @@ main {
 .imagenpersos {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra horizontalmente el contenido */
-    text-align: center; /* Centra el texto dentro del div */
-    max-width: 90%; /* Ajusta el tamaño máximo del div si es necesario */
-    margin: 20px; /* Agrega margen alrededor del div */
+    align-items: center; 
+    text-align: center;
+    max-width: 90%; 
+    margin: 20px; 
 }
 .imagenpersos img {
-    max-width: 100%; /* Asegura que la imagen no exceda el ancho del div */
-    height: auto; /* Mantiene la relación de aspecto de la imagen */
-    margin-bottom: 20px; /* Espacio entre la imagen y el texto */
+    max-width: 100%;
+    height: auto; 
+    margin-bottom: 20px; 
     margin-top: 100px;
 }
 .container {
@@ -172,6 +172,187 @@ a:hover {
     text-decoration: underline;
 }
 
+.container {
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 0 15px;
+}
+
+
+.titulo {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #444;
+}
+
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.producto {
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 calc(30% - 20px);
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.producto-img {
+    width: 100%;
+    max-height: 200px; 
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+
+.producto-btn {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.producto-btn:hover {
+    background-color: #444444; 
+    transform: scale(1.05);
+}
+
+
+.carrito {
+    border: 3px solid #000000; 
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+.carrito-producto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s; 
+}
+
+
+.carrito-producto:hover {
+    background-color: #e0e0e0; 
+}
+
+
+.carrito-producto-btn {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 4px; 
+    transition: background-color 0.3s; 
+}
+
+.carrito-producto-btn:hover {
+    background-color: #444444; 
+}
+
+
+.carrito-total {
+    font-size: 24px; 
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: right;
+    color: #333; 
+}
+
+.mensaje {
+    background-color: #ffffff; 
+    color: #000000; 
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #000000; 
+    border-radius: 5px; 
+    position: fixed; 
+    top: 20px; 
+    left: 50%; 
+    margin-left: -150px; 
+    width: 300px;
+}
+
+.d-none {
+    display: none;
+}
+
+.footer {
+    background-color: #00060c; 
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    background-color: #000000;
+    padding: 10px 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
 
 
 @media screen and (max-width: 900px){
